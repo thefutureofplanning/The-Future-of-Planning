@@ -5,11 +5,10 @@
 
 export const mission = {
   statement:
-    'Financial planning is in the middle of the largest handoff in its history. I write to make that handoff go well — for the advisors leaving, the ones arriving, and the clients who depend on both.',
+    'Financial planning is in the middle of the largest handoff in its history. I write to make that handoff go well. For the advisors leaving, the ones arriving, and the clients who depend on us.',
   body: [
-    'The profession is short on planners and long on demand. Most of what has been written about that gap is written by people looking at it from the far side of a career. I am looking at it from the beginning of one.',
+    'The profession is short on planners and demand is increasing. Most of what has been written about that gap is written by people looking at it from the end of a career. I am looking at it from the beginning, and hoping to add a new perspective to the conversation.',
     'The Future of Planning is where I think in public: what draws students in, what pushes them out, what technology changes and what it never will, and how firms build the kind of place a twenty-two-year-old wants to spend a decade.',
-    'Nothing here is a pitch. It is a working record of a profession in transition, kept by someone with a very long stake in how it turns out.',
   ],
 }
 
