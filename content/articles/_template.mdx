@@ -1,0 +1,44 @@
+---
+title: 'A short, declarative title'
+description: 'One or two sentences that state the argument. This appears on cards, in search results and in the newsletter.'
+date: '2026-01-01'
+category: 'Profession'
+tags: ['tag-one', 'tag-two']
+featured: false
+draft: true
+---
+
+Open with the observation, not the throat-clearing. One or two paragraphs that put the reader inside the problem before any structure appears.
+
+## The first idea
+
+Use h2 for the main moves in the argument; they become the table of contents automatically. Keep them short — three to six words reads best in the sidebar.
+
+### A sub-point
+
+h3 nests under the previous h2 in the contents list. Use it sparingly.
+
+<PullQuote>
+One line, once per piece. Save it for the sentence you would want quoted back to you.
+</PullQuote>
+
+## The second idea
+
+Ordinary markdown works throughout: **bold**, _italic_, [links](/articles), lists, and tables.
+
+<Note label="A caveat">
+Use Note for the aside that would otherwise interrupt the argument — a qualification, a piece of context, a disclosure.
+</Note>
+
+## Where this leaves us
+
+End on the implication rather than a summary. The reader already read it.
+
+---
+
+Notes on the fields above:
+
+- `category` should match one of the four topics in `src/lib/content/topics.ts`, or add a new one there first.
+- `featured: true` promotes the piece to the hero card on the homepage and the articles index. Only one piece should carry it.
+- `draft: true` hides the piece in production but shows it locally, so it is safe to commit a work in progress.
+- Delete this file's leading underscore to publish it — files starting with `_` are never loaded.

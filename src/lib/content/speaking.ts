@@ -1,0 +1,72 @@
+export type SpeakingTopic = {
+  title: string
+  audience: string
+  description: string
+}
+
+export type Appearance = {
+  event: string
+  detail: string
+  year: string
+  upcoming?: boolean
+}
+
+export const speakingIntro =
+  'I speak about the next generation of financial planners — how firms recruit them, what makes them stay, and what the profession looks like when they are running it. Sessions are built for the room: a student chapter and a room of firm owners need very different conversations.'
+
+export const speakingTopics: SpeakingTopic[] = [
+  {
+    title: 'Hiring the next generation without guessing',
+    audience: 'Firm owners, hiring managers, recruiters',
+    description:
+      'What students are actually comparing when they choose a firm, where postings lose them, and the small changes that make an offer competitive.',
+  },
+  {
+    title: 'The first five years decide everything',
+    audience: 'Firm leaders, teams building an associate track',
+    description:
+      'How early-career advisors are developed — the training, mentorship and ownership questions that determine whether a hire becomes a partner or a resume line.',
+  },
+  {
+    title: 'From student to advisor',
+    audience: 'University programs, student chapters, career centers',
+    description:
+      'A practical map of the path into the profession: internships, credentials, conferences and the decisions that compound early.',
+  },
+  {
+    title: 'Building a student organization that firms notice',
+    audience: 'Student leaders, faculty advisors, program directors',
+    description:
+      'What we have built at UVU — programming, industry relationships and the recruiting pipeline a chapter can create on a student budget.',
+  },
+]
+
+/**
+ * Update as engagements are confirmed. Set `upcoming: true` to surface an entry
+ * at the top of the speaking page with an "upcoming" marker.
+ */
+export const appearances: Appearance[] = [
+  {
+    event: "Bob Veres Insider's Forum",
+    detail: 'Session on recruiting and developing next-generation planners',
+    year: '2026',
+    upcoming: true,
+  },
+  {
+    event: 'University and student chapter sessions',
+    detail: 'Career paths, credentials and getting hired before graduation',
+    year: '2025 — present',
+  },
+  {
+    event: 'National financial planning conferences',
+    detail: 'Panels and roundtables on the profession’s talent pipeline',
+    year: '2024 — present',
+  },
+]
+
+export const speakingLogistics = [
+  { label: 'Formats', value: 'Keynote, breakout session, panel, workshop, podcast' },
+  { label: 'Audiences', value: 'Students, associate advisors, firm owners, conference programs' },
+  { label: 'Lead time', value: 'Four weeks preferred; shorter timelines are worth asking about' },
+  { label: 'Travel', value: 'Available nationally; remote sessions welcome' },
+]
