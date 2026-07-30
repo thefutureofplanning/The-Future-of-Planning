@@ -22,7 +22,6 @@ export const siteConfig = {
     { label: 'Articles', href: '/articles' },
     { label: 'About', href: '/about' },
     { label: 'Speaking', href: '/speaking' },
-    { label: 'Leadership', href: '/leadership' },
     { label: 'Projects', href: '/projects' },
     { label: 'Resources', href: '/resources' },
   ],
@@ -39,7 +38,6 @@ export const siteConfig = {
       heading: 'Work',
       links: [
         { label: 'About', href: '/about' },
-        { label: 'Leadership', href: '/leadership' },
         { label: 'Projects', href: '/projects' },
       ],
     },

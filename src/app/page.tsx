@@ -4,7 +4,6 @@ import { RecentWriting } from '@/components/home/RecentWriting'
 import { Topics } from '@/components/home/Topics'
 import { Mission } from '@/components/home/Mission'
 import { SpeakingHighlights } from '@/components/home/SpeakingHighlights'
-import { LeadershipHighlights } from '@/components/home/LeadershipHighlights'
 import { NewsletterCta } from '@/components/home/NewsletterCta'
 import { getArticleMeta, getFeaturedArticle, toMeta } from '@/lib/articles'
 import { siteConfig } from '@/lib/site'
@@ -29,7 +28,6 @@ export default function HomePage() {
       <Topics />
       <Mission />
       <SpeakingHighlights />
-      <LeadershipHighlights />
       <NewsletterCta />
     </>
   )

@@ -29,64 +29,15 @@ export const bio = {
   ],
 }
 
-export type TimelineEntry = {
-  period: string
-  title: string
-  org: string
-  detail: string
+/**
+ * Placeholder — replace with Jenna's own "why" narrative when she sends it.
+ * Renders in the About page's "Why" section in place of the old timeline.
+ */
+export const why = {
+  paragraphs: [
+    'Add your "why" here — what got you into financial planning, and why you write about it publicly. Send me the text and I\'ll drop it in.',
+  ],
 }
-
-export const timeline: TimelineEntry[] = [
-  {
-    period: 'Now',
-    title: 'Associate Advisor',
-    org: 'Wealth management, full time',
-    detail:
-      'Client planning work alongside a full-time course load — cash flow, tax coordination, portfolio reviews and meeting preparation.',
-  },
-  {
-    period: 'Now',
-    title: 'President',
-    org: 'Personal Financial Planning Student Association',
-    detail:
-      'Leading a student chapter focused on connecting members to firms, credentials and conferences before graduation.',
-  },
-  {
-    period: 'Now',
-    title: 'Chief Marketing Officer',
-    org: 'Student-led initiative',
-    detail:
-      'Brand, communications and recruiting materials for a student organization serving the personal financial planning program.',
-  },
-  {
-    period: 'Now',
-    title: 'Research Team Lead',
-    org: 'AdvisorSmart',
-    detail:
-      'Leading a research team studying how advisory firms attract, hire and develop early-career planners.',
-  },
-  {
-    period: 'Now',
-    title: 'Financial Coach',
-    org: 'UVU Money Success Center',
-    detail:
-      'One-on-one coaching for students on budgeting, debt, credit and the first financial decisions of adulthood.',
-  },
-  {
-    period: 'Summer',
-    title: 'Summer Intern',
-    org: 'Mariner Wealth Advisors — New York City',
-    detail:
-      'A summer inside a national firm: planning deliverables, client meetings and how a large advisory practice actually runs.',
-  },
-  {
-    period: 'Ongoing',
-    title: 'FinServ Foundation Fellow',
-    org: 'FinServ Foundation',
-    detail:
-      'A fellowship supporting students entering financial services, alongside multiple academic and industry scholarships.',
-  },
-]
 
 export const credentials = [
   { label: 'Program', value: 'Personal Financial Planning, Utah Valley University' },

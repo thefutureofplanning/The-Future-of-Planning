@@ -3,7 +3,7 @@ import { ButtonLink } from '@/components/ui/Button'
 import { Container } from '@/components/ui/Container'
 import { PageHeader, Section, SectionHeading } from '@/components/ui/Section'
 import { Reveal } from '@/components/ui/Reveal'
-import { bio, credentials, mission, timeline } from '@/lib/content/profile'
+import { bio, credentials, mission, why } from '@/lib/content/profile'
 import { siteConfig } from '@/lib/site'
 
 export const metadata: Metadata = {
@@ -71,25 +71,12 @@ export default function AboutPage() {
       </Section>
 
       <Section>
-        <SectionHeading label="Experience" title="What the week actually contains." />
-        <ol className="space-y-0">
-          {timeline.map((entry, index) => (
-            <Reveal as="li" key={`${entry.title}-${entry.org}`} delay={index * 60}>
-              <div className="grid gap-3 border-t border-rule py-7 sm:grid-cols-[8rem_1fr_1.2fr] sm:gap-8">
-                <p className="tick text-horizon sm:pt-1">{entry.period}</p>
-                <div>
-                  <h3 className="font-display text-xl leading-snug tracking-tight text-ink">
-                    {entry.title}
-                  </h3>
-                  <p className="mt-1 font-sans text-sm text-graphite">{entry.org}</p>
-                </div>
-                <p className="font-sans text-[0.9375rem] leading-relaxed text-graphite">
-                  {entry.detail}
-                </p>
-              </div>
-            </Reveal>
+        <SectionHeading label="Why" title="Why I write about this." />
+        <div className="max-w-3xl space-y-6 font-display text-lg leading-relaxed text-ink sm:text-xl">
+          {why.paragraphs.map((paragraph) => (
+            <p key={paragraph.slice(0, 24)}>{paragraph}</p>
           ))}
-        </ol>
+        </div>
 
         <Reveal>
           <div className="mt-14 flex flex-col gap-3 sm:flex-row">
