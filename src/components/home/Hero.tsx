@@ -9,7 +9,7 @@ export function Hero() {
           className="animate-rise max-w-[19ch] font-display text-display-lg text-ink"
           style={{ animationDelay: '80ms' }}
         >
-          Building the future of financial planning
+          Building the <em className="italic text-horizon">future</em> of financial planning
         </h1>
 
         <p
