@@ -7,7 +7,7 @@ export function SpeakingHighlights() {
     <Section className="border-t border-rule bg-surface">
       <SectionHeading
         label="Speaking"
-        title="Sessions built for the room, not the résumé."
+        title="Conversations about the future of financial planning for students, firms, and industry leaders."
         action={{ label: 'Speaking details', href: '/speaking' }}
       />
       <ul className="divide-y divide-rule border-y border-rule">
