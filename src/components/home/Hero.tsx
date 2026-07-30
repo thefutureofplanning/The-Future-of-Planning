@@ -1,15 +1,5 @@
 import { ButtonLink } from '@/components/ui/Button'
 import { Container } from '@/components/ui/Container'
-import { cn } from '@/lib/utils'
-
-const ticks = [
-  { label: 'Now', span: 'Year one' },
-  { label: '+10', span: 'Mid-career' },
-  { label: '+20', span: 'Firm building' },
-  { label: '+30', span: 'Succession' },
-  { label: '+40', span: 'Handoff' },
-  { label: '+50', span: 'The horizon' },
-]
 
 export function Hero() {
   return (
@@ -48,47 +38,6 @@ export function Hero() {
           <ButtonLink href="/schedule" variant="secondary">
             Schedule a conversation
           </ButtonLink>
-        </div>
-
-        {/* The horizon: this publication's fixed point of view — a career measured
-            in decades rather than quarters. */}
-        <div className="mt-20 sm:mt-28">
-          <div
-            className="horizon-rule animate-draw origin-left"
-            style={{ animationDelay: '420ms' }}
-            aria-hidden="true"
-          />
-          <ol className="grid grid-cols-6" aria-label="A fifty-year horizon">
-            {ticks.map((tick, index) => (
-              <li
-                key={tick.label}
-                className="animate-rise flex flex-col items-start"
-                style={{ animationDelay: `${560 + index * 70}ms` }}
-              >
-                <span
-                  aria-hidden="true"
-                  className={cn('w-px', index === 0 ? 'h-4 bg-horizon' : 'h-2.5 bg-rule')}
-                />
-                <span
-                  className={cn(
-                    'mt-3 tick',
-                    index === 0 ? 'text-horizon' : 'text-graphite',
-                  )}
-                >
-                  {tick.label}
-                </span>
-                <span className="mt-1.5 hidden font-sans text-xs text-graphite/80 sm:block">
-                  {tick.span}
-                </span>
-              </li>
-            ))}
-          </ol>
-          <p
-            className="animate-rise mt-10 max-w-md font-display text-lg italic text-graphite"
-            style={{ animationDelay: '980ms' }}
-          >
-            Written from year one of a fifty-year horizon.
-          </p>
         </div>
       </Container>
     </section>
