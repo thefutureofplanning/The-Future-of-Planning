@@ -14,7 +14,7 @@ export const mission = {
 
 export const bio = {
   short:
-    'Jenna Smith is a financial planning student at Utah Valley University and an associate advisor working full time in wealth management. She writes and speaks about how the profession recruits, develops and keeps its next generation.',
+    'Jenna Smith is a financial planner based in Utah. She writes and speaks about how the profession recruits, develops and retains next-gen talent.',
   long: [
     'I am nineteen, working full time in wealth management while carrying a full course load in personal financial planning at Utah Valley University. That combination is unusual, and it is the reason this publication exists: I get to watch the profession from the client meeting and the classroom on the same day.',
     'Most mornings look like real planning work — cash flow, tax questions, portfolio reviews, meeting prep. Most afternoons look like coursework, a student association agenda, or a coaching appointment at the Money Success Center, where I sit with students working through their own money decisions.',
