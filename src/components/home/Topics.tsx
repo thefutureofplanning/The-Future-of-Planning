@@ -8,7 +8,7 @@ export function Topics() {
     <Section className="border-t border-rule bg-surface">
       <SectionHeading
         label="Featured topics"
-        title="Four questions this publication keeps returning to."
+        title="Four questions on our minds"
       />
       <ul className="grid gap-6 sm:grid-cols-2">
         {topics.map((topic, index) => (
