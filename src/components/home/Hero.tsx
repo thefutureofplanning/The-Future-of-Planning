@@ -5,29 +5,18 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden pb-16 pt-16 sm:pb-24 sm:pt-24">
       <Container>
-        <p
-          className="animate-rise tick"
+        <h1
+          className="animate-rise max-w-[19ch] font-display text-display-lg text-ink"
           style={{ animationDelay: '80ms' }}
         >
-          Essays on the profession&rsquo;s next fifty years
-        </p>
-
-        <h1
-          className="animate-rise mt-8 max-w-[19ch] font-display text-display-lg text-ink"
-          style={{ animationDelay: '160ms' }}
-        >
-          Planning for a profession that{' '}
-          <em className="not-italic text-horizon">
-            <span className="italic">hasn&rsquo;t happened yet.</span>
-          </em>
+          Building the future of financial planning
         </h1>
 
         <p
           className="animate-rise mt-8 max-w-xl font-sans text-lg leading-relaxed text-graphite sm:text-xl"
           style={{ animationDelay: '260ms' }}
         >
-          Exploring the future of financial planning through the perspective of the next
-          generation.
+          For advisors, students, and firms investing in what&rsquo;s to come.
         </p>
 
         <div
