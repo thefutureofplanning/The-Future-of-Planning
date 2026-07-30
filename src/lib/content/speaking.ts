@@ -22,10 +22,10 @@ export const speakingTopics: SpeakingTopic[] = [
       'What today’s emerging advisors are looking for and how firms can recruit, develop, and retain exceptional people.',
   },
   {
-    title: 'The first five years decide everything',
+    title: 'The first five years set the foundation',
     audience: 'Firm leaders, teams building an associate track',
     description:
-      'How early-career advisors are developed — the training, mentorship and ownership questions that determine whether a hire becomes a partner or a resume line.',
+      'The mentorship, responsibility, and growth opportunities that turn new hires into future leaders.',
   },
   {
     title: 'From student to advisor',
