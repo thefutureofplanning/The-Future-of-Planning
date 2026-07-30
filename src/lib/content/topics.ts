@@ -26,9 +26,9 @@ export const topics: Topic[] = [
   },
   {
     label: 'Technology',
-    title: 'What software changes, and what it never will',
+    title: 'Better technology, better advice.',
     description:
-      'Planning tools, automation and AI, judged by whether they improve the meeting rather than the demo.',
+      'How innovation can improve planning without sacrificing the human side of the profession.',
     href: '/articles?category=Technology',
   },
   {
