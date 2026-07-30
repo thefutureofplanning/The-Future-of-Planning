@@ -10,5 +10,6 @@ yarn-error.log*
 .env
 .env*.local
 .vercel
+.claude/settings.local.json
 *.tsbuildinfo
 next-env.d.ts.bak
