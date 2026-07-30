@@ -33,9 +33,9 @@ export const topics: Topic[] = [
   },
   {
     label: 'Profession',
-    title: 'The shape of the next decade',
+    title: 'The next generation of ownership',
     description:
-      'Succession, ownership, fee models and the slow structural questions the profession keeps postponing.',
+      'How client wealth, advisory firms, and leadership are changing hands.',
     href: '/articles?category=Profession',
   },
 ]
