@@ -17,7 +17,7 @@ export default function AboutPage() {
     <>
       <PageHeader
         eyebrow="About"
-        title="A planner writing from year one of the career."
+        title="A next-gen planner, building and documenting as she goes."
         lede={bio.short}
       />
 
