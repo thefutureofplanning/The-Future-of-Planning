@@ -11,11 +11,11 @@ export type Topic = {
  */
 export const topics: Topic[] = [
   {
-    label: 'Pipeline',
-    title: 'Where the next planners come from',
+    label: 'Talent',
+    title: 'Helping firms build exceptional advisors',
     description:
-      'Why students choose this profession, why they leave it, and what actually moves someone from curious to committed.',
-    href: '/articles?category=Pipeline',
+      'Insights on recruiting, mentorship, leadership, and creating careers where great advisors want to stay.',
+    href: '/articles?category=Talent',
   },
   {
     label: 'Practice',
