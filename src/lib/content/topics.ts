@@ -18,11 +18,11 @@ export const topics: Topic[] = [
     href: '/articles?category=Talent',
   },
   {
-    label: 'Practice',
-    title: 'How firms build advisors',
+    label: 'NextGen',
+    title: 'What the next generation wants',
     description:
-      'Training, mentorship, compensation and the first five years — the part of the career that decides who stays.',
-    href: '/articles?category=Practice',
+      'Exploring the careers, cultures, leadership, and opportunities that attract and retain tomorrow’s financial planners.',
+    href: '/articles?category=NextGen',
   },
   {
     label: 'Technology',
