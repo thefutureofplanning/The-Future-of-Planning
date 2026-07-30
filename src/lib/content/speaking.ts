@@ -16,10 +16,10 @@ export const speakingIntro =
 
 export const speakingTopics: SpeakingTopic[] = [
   {
-    title: 'Hiring the next generation without guessing',
+    title: 'Helping firms win the talent race',
     audience: 'Firm owners, hiring managers, recruiters',
     description:
-      'What students are actually comparing when they choose a firm, where postings lose them, and the small changes that make an offer competitive.',
+      'What today’s emerging advisors are looking for and how firms can recruit, develop, and retain exceptional people.',
   },
   {
     title: 'The first five years decide everything',
