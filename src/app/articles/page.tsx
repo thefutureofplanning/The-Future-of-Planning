@@ -30,8 +30,7 @@ export default function ArticlesPage({
     <>
       <PageHeader
         eyebrow="Writing"
-        title="Essays and field notes on where planning goes next."
-        lede="Long-form thinking about the profession, written from inside it. New pieces land in the newsletter first."
+        title="Essays and field notes on where planning is headed."
       />
 
       <Container className="pb-16 sm:pb-20">
