@@ -35,7 +35,7 @@ export default function NewsletterPage() {
     <>
       <PageHeader
         eyebrow="Newsletter"
-        title="A letter on where the profession is going."
+        title="A letter on where the profession is going, from a fresh perspective."
         lede="One send at a time, written for people who care how this profession hands itself over. No sponsorships, no roundups, no filler."
       />
 

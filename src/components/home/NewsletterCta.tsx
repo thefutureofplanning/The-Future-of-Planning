@@ -12,11 +12,11 @@ export function NewsletterCta() {
               <div>
                 <p className="tick text-horizon">Newsletter</p>
                 <h2 className="mt-6 font-display text-display-sm text-ink">
-                  A letter on where the profession is going.
+                  A letter on where the profession is going, from a fresh perspective.
                 </h2>
                 <p className="mt-5 max-w-md font-sans text-base leading-relaxed text-graphite">
-                  New essays, field notes from conferences and firm visits, and the occasional
-                  research finding — sent when there is something worth sending.
+                  New essays, insights, and the occasional research finding. Sent when there is
+                  something worth sending.
                 </p>
               </div>
               <div className="flex flex-col justify-center">

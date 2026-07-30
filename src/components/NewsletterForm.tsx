@@ -77,7 +77,7 @@ export function NewsletterForm({ className, id = 'newsletter' }: { className?: s
           status === 'error' ? 'text-ink' : 'text-graphite',
         )}
       >
-        {message || 'One issue at a time. Unsubscribe whenever.'}
+        {message || 'Unsubscribe whenever.'}
       </p>
     </div>
   )
