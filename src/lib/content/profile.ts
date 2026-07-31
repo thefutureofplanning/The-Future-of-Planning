@@ -32,12 +32,12 @@ export const bio = {
   ],
 }
 
-/**
- * Placeholder — replace with Jenna's own "why" narrative when she sends it.
- * Renders in the About page's "Why" section in place of the old timeline.
- */
 export const why = {
   paragraphs: [
-    'Add your "why" here — what got you into financial planning, and why you write about it publicly. Send me the text and I\'ll drop it in.',
+    'Like many advisors, I didn’t choose financial planning because I love managing investments or creating spreadsheets.',
+    'I chose it because I know what financial stress feels like. I know what it looks like when money creates tension at home, and I know how different life could have been if my family had access to good financial advice.',
+    'Helping families starts long before the first client meeting. We need to build a profession that attracts great people, develops them well, and gives them a reason to stay. If we want more families to experience the life-changing impact of financial planning, we need more exceptional financial planners.',
+    'That’s what led me to this. I became fascinated by what makes someone choose this profession, what makes them stay, and what firms can do to become places where great advisors help people. Every talented student who enters the profession, every young advisor who finds a mentor, and every firm that invests intentionally in its people creates a ripple effect that reaches hundreds of families.',
+    'That’s why I write. I want to help firms better understand the next generation, help emerging advisors build their careers, and ultimately strengthen the profession that has already changed my own life.',
   ],
 }
