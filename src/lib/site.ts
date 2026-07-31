@@ -10,7 +10,7 @@ export const siteConfig = {
   author: {
     name: 'Jenna Smith',
     role: 'Associate Advisor · Financial planning student, Utah Valley University',
-    email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? 'hello@thefutureofplanning.com',
+    email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? 'thefutureofplanning@gmail.com',
   },
   calendlyUrl:
     process.env.NEXT_PUBLIC_CALENDLY_URL ?? 'https://calendly.com/your-handle/30min',
