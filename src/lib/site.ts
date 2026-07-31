@@ -16,7 +16,7 @@ export const siteConfig = {
     process.env.NEXT_PUBLIC_SCHEDULING_URL ?? 'https://cal.com/jenna-smith/30min',
   social: {
     linkedin: 'https://www.linkedin.com/in/jennasmith3/',
-    instagram: 'https://www.instagram.com/your-handle',
+    instagram: 'https://www.instagram.com/jenna.e.smith/',
   },
   nav: [
     { label: 'Articles', href: '/articles' },
