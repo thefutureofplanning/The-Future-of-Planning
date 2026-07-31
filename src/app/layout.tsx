@@ -45,7 +45,6 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: '/',
-    types: { 'application/rss+xml': `${siteConfig.url}/feed.xml` },
   },
   openGraph: {
     type: 'website',
@@ -115,7 +114,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
-        <link rel="alternate" type="application/rss+xml" title={siteConfig.name} href="/feed.xml" />
       </head>
       <body className="min-h-screen bg-paper font-sans text-ink antialiased">
         <a

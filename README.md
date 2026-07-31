@@ -31,7 +31,7 @@ Copy `.env.example` to `.env.local` and set:
 
 | Variable | Required | What it does |
 | --- | --- | --- |
-| `NEXT_PUBLIC_SITE_URL` | Yes | Canonical URLs, sitemap, RSS, OG images. No trailing slash. |
+| `NEXT_PUBLIC_SITE_URL` | Yes | Canonical URLs, sitemap, OG images. No trailing slash. |
 | `NEXT_PUBLIC_SCHEDULING_URL` | Yes | The booking link embedded on `/schedule`. |
 | `NEXT_PUBLIC_CONTACT_EMAIL` | Yes | Address shown on `/contact` and used by the contact form. |
 | `BUTTONDOWN_API_KEY` | No | Newsletter provider key. Without it, `/api/subscribe` returns a clear "not connected" message instead of silently dropping signups. |
@@ -58,7 +58,7 @@ draft: false                # true = visible locally, hidden in production
 ---
 ```
 
-Everything else is derived automatically: reading time, the table of contents (from `##` and `###` headings), related articles, the RSS entry, the sitemap entry and the Open Graph image.
+Everything else is derived automatically: reading time, the table of contents (from `##` and `###` headings), related articles, the sitemap entry and the Open Graph image.
 
 Files beginning with `_` are never loaded, so the template can live beside real articles.
 
@@ -141,7 +141,7 @@ src/lib/
 
 ## What is wired up
 
-**Article system** — featured piece, categories, client-side search, reading time, sticky table of contents with scroll spy, related articles by shared category and tags, share links, RSS.
+**Article system** — featured piece, categories, client-side search, reading time, sticky table of contents with scroll spy, related articles by shared category and tags, share links.
 
 **SEO** — per-page metadata, canonical URLs, Open Graph and Twitter cards, JSON-LD (`Person` sitewide, `BlogPosting` per article), `sitemap.xml`, `robots.txt`, and a dynamic OG image at `/og` that renders the horizon motif with the article title.
 

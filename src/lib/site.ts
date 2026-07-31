@@ -30,7 +30,6 @@ export const siteConfig = {
       links: [
         { label: 'All articles', href: '/articles' },
         { label: 'Newsletter', href: '/newsletter' },
-        { label: 'RSS feed', href: '/feed.xml' },
       ],
     },
     {

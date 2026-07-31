@@ -50,16 +50,6 @@ export default function NewsletterPage() {
               <div className="mt-8">
                 <NewsletterForm id="newsletter-page" />
               </div>
-              <p className="mt-6 font-sans text-sm leading-relaxed text-graphite">
-                Prefer a reader? The archive is also available by{' '}
-                <a
-                  href="/feed.xml"
-                  className="link-underline text-ink transition-colors hover:text-horizon"
-                >
-                  RSS
-                </a>
-                .
-              </p>
             </div>
           </Reveal>
 

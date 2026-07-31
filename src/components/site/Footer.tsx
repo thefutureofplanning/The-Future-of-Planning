@@ -58,12 +58,6 @@ export function Footer() {
             >
               Instagram
             </a>
-            <a
-              href="/feed.xml"
-              className="font-sans text-sm text-graphite transition-colors hover:text-horizon"
-            >
-              RSS
-            </a>
           </div>
         </div>
       </Container>
