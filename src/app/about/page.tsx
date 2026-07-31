@@ -3,7 +3,7 @@ import { ButtonLink } from '@/components/ui/Button'
 import { Container } from '@/components/ui/Container'
 import { PageHeader, Section, SectionHeading } from '@/components/ui/Section'
 import { Reveal } from '@/components/ui/Reveal'
-import { bio, credentials, mission, why } from '@/lib/content/profile'
+import { bio, mission, why } from '@/lib/content/profile'
 import { siteConfig } from '@/lib/site'
 
 export const metadata: Metadata = {
@@ -32,16 +32,7 @@ export default function AboutPage() {
           </Reveal>
 
           <Reveal delay={120}>
-            <dl className="rounded-panel border border-rule bg-surface p-8">
-              {credentials.map((item) => (
-                <div key={item.label} className="border-b border-rule py-4 first:pt-0 last:border-0 last:pb-0">
-                  <dt className="tick">{item.label}</dt>
-                  <dd className="mt-2 font-sans text-[0.9375rem] text-ink">{item.value}</dd>
-                </div>
-              ))}
-            </dl>
-
-            <div className="mt-8">
+            <div>
               <p className="tick">Currently writing about</p>
               <ul className="mt-4 space-y-2.5">
                 {bio.focus.map((item) => (

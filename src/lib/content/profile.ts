@@ -41,10 +41,3 @@ export const why = {
     'Add your "why" here — what got you into financial planning, and why you write about it publicly. Send me the text and I\'ll drop it in.',
   ],
 }
-
-export const credentials = [
-  { label: 'Program', value: 'Personal Financial Planning, Utah Valley University' },
-  { label: 'GPA', value: '3.95' },
-  { label: 'Track', value: 'CFP® Board registered curriculum' },
-  { label: 'Based', value: 'Utah · working nationally' },
-]
