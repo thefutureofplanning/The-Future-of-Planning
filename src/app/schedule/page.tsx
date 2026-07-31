@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { CalendlyEmbed } from '@/components/CalendlyEmbed'
+import { SchedulingEmbed } from '@/components/SchedulingEmbed'
 import { Container } from '@/components/ui/Container'
 import { PageHeader } from '@/components/ui/Section'
 import { Reveal } from '@/components/ui/Reveal'
@@ -36,8 +36,8 @@ export default function SchedulePage() {
     <>
       <PageHeader
         eyebrow="Schedule"
-        title="Thirty minutes, on the calendar."
-        lede="Pick any open time. Come with a question, a problem you are working on, or nothing at all — most of these conversations start unstructured and get useful fast."
+        title="Let's find a time to connect!"
+        lede="Pick any open time. Come with a question, a problem you are working on, a speaking request, or nothing at all. I am happy to be a sounding board."
       />
 
       <Container className="pb-section">
@@ -71,7 +71,7 @@ export default function SchedulePage() {
           </Reveal>
 
           <Reveal delay={120}>
-            <CalendlyEmbed />
+            <SchedulingEmbed />
           </Reveal>
         </div>
       </Container>

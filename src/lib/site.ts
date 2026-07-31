@@ -12,8 +12,8 @@ export const siteConfig = {
     role: 'Associate Advisor · Financial planning student, Utah Valley University',
     email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? 'thefutureofplanning@gmail.com',
   },
-  calendlyUrl:
-    process.env.NEXT_PUBLIC_CALENDLY_URL ?? 'https://calendly.com/your-handle/30min',
+  schedulingUrl:
+    process.env.NEXT_PUBLIC_SCHEDULING_URL ?? 'https://cal.com/jenna-smith/30min',
   social: {
     linkedin: 'https://www.linkedin.com/in/your-handle',
     x: 'https://x.com/your-handle',

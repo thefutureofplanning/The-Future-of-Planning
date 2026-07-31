@@ -26,7 +26,7 @@ export default function SpeakingPage() {
         lede={speakingIntro}
       >
         <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-          <ButtonLink href={siteConfig.calendlyUrl} external>
+          <ButtonLink href={siteConfig.schedulingUrl} external>
             Schedule a discovery call
           </ButtonLink>
           <ButtonLink href="/contact" variant="secondary">

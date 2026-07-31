@@ -3,17 +3,14 @@
 import { useEffect, useRef, useState } from 'react'
 import { siteConfig } from '@/lib/site'
 
-const WIDGET_SCRIPT = 'https://assets.calendly.com/assets/external/widget.js'
-
 /**
- * Loads Calendly only when the embed scrolls into view, so the scheduling page
- * still ships a fast first paint. If the script is blocked or fails, the direct
- * link below remains usable.
+ * Loads the booking page in an iframe only once it scrolls into view, so the
+ * scheduling page still ships a fast first paint. Works with any scheduler
+ * that allows iframing (Cal.com, Calendly, etc.) — no provider-specific script.
  */
-export function CalendlyEmbed({ url = siteConfig.calendlyUrl }: { url?: string }) {
+export function SchedulingEmbed({ url = siteConfig.schedulingUrl }: { url?: string }) {
   const containerRef = useRef<HTMLDivElement | null>(null)
   const [shouldLoad, setShouldLoad] = useState(false)
-  const [failed, setFailed] = useState(false)
 
   useEffect(() => {
     const node = containerRef.current
@@ -36,36 +33,20 @@ export function CalendlyEmbed({ url = siteConfig.calendlyUrl }: { url?: string }
     return () => observer.disconnect()
   }, [])
 
-  useEffect(() => {
-    if (!shouldLoad) return
-
-    const existing = document.querySelector<HTMLScriptElement>(`script[src="${WIDGET_SCRIPT}"]`)
-    if (existing) return
-
-    const script = document.createElement('script')
-    script.src = WIDGET_SCRIPT
-    script.async = true
-    script.onerror = () => setFailed(true)
-    document.body.appendChild(script)
-  }, [shouldLoad])
-
   return (
     <div ref={containerRef}>
-      {shouldLoad && !failed ? (
-        <div
-          className="calendly-inline-widget overflow-hidden rounded-panel border border-rule bg-surface"
-          data-url={`${url}?hide_gdpr_banner=1&background_color=ffffff&text_color=0E1A1C&primary_color=0F6E63`}
+      {shouldLoad ? (
+        <iframe
+          src={url}
+          title="Schedule a conversation"
+          className="w-full overflow-hidden rounded-panel border border-rule bg-surface"
           style={{ minWidth: '320px', height: '720px' }}
         />
       ) : (
         <div className="flex min-h-[18rem] flex-col items-start justify-center rounded-panel border border-dashed border-rule bg-surface p-10">
-          <p className="font-display text-xl text-ink">
-            {failed ? 'The scheduler did not load.' : 'Loading the calendar…'}
-          </p>
+          <p className="font-display text-xl text-ink">Loading the calendar…</p>
           <p className="mt-2 max-w-md font-sans text-[0.9375rem] text-graphite">
-            {failed
-              ? 'Open the booking page directly, or send an email and we will find a time.'
-              : 'Pick any open slot. Thirty minutes, no agenda required.'}
+            Pick any open slot. Thirty minutes, no agenda required.
           </p>
           <a
             href={url}

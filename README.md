@@ -32,7 +32,7 @@ Copy `.env.example` to `.env.local` and set:
 | Variable | Required | What it does |
 | --- | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | Yes | Canonical URLs, sitemap, RSS, OG images. No trailing slash. |
-| `NEXT_PUBLIC_CALENDLY_URL` | Yes | The booking link embedded on `/schedule`. |
+| `NEXT_PUBLIC_SCHEDULING_URL` | Yes | The booking link embedded on `/schedule`. |
 | `NEXT_PUBLIC_CONTACT_EMAIL` | Yes | Address shown on `/contact` and used by the contact form. |
 | `BUTTONDOWN_API_KEY` | No | Newsletter provider key. Without it, `/api/subscribe` returns a clear "not connected" message instead of silently dropping signups. |
 
@@ -145,7 +145,7 @@ src/lib/
 
 **SEO** — per-page metadata, canonical URLs, Open Graph and Twitter cards, JSON-LD (`Person` sitewide, `BlogPosting` per article), `sitemap.xml`, `robots.txt`, and a dynamic OG image at `/og` that renders the horizon motif with the article title.
 
-**Scheduling** — Calendly loads only when the embed scrolls into view, so `/schedule` still paints fast. If the script is blocked or fails, a direct booking link takes over.
+**Scheduling** — the booking page (Cal.com by default, but any iframeable scheduler works) loads only when the embed scrolls into view, so `/schedule` still paints fast. A direct booking link is always shown as a fallback.
 
 **Newsletter** — the form posts to `/api/subscribe`. Buttondown is wired by default; swapping in ConvertKit, Beehiiv or Mailchimp means changing one `fetch` in `src/app/api/subscribe/route.ts` and nothing else.
 
@@ -184,7 +184,7 @@ The codebase is structured for a publication that grows for years:
 
 **A dependency has no TypeScript declarations** — add `declare module 'package-name'` to a new `src/types/vendor.d.ts`.
 
-**Calendly does not appear** — check `NEXT_PUBLIC_CALENDLY_URL`, then check whether a content blocker is stopping `assets.calendly.com`. The fallback link works either way.
+**Booking calendar does not appear** — check `NEXT_PUBLIC_SCHEDULING_URL`, then check whether a content blocker is stopping the iframe from loading. The fallback link works either way.
 
 **Newsletter returns "not connected"** — that is the expected response until `BUTTONDOWN_API_KEY` is set. It is deliberate: signups are never accepted and discarded.
 
