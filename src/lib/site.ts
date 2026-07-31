@@ -22,7 +22,6 @@ export const siteConfig = {
     { label: 'Articles', href: '/articles' },
     { label: 'About', href: '/about' },
     { label: 'Speaking', href: '/speaking' },
-    { label: 'Projects', href: '/projects' },
     { label: 'Resources', href: '/resources' },
   ],
   footerNav: [
@@ -36,10 +35,7 @@ export const siteConfig = {
     },
     {
       heading: 'Work',
-      links: [
-        { label: 'About', href: '/about' },
-        { label: 'Projects', href: '/projects' },
-      ],
+      links: [{ label: 'About', href: '/about' }],
     },
     {
       heading: 'Connect',
