@@ -3,6 +3,7 @@ import { ButtonLink } from '@/components/ui/Button'
 import { Container } from '@/components/ui/Container'
 import { PageHeader, Section, SectionHeading } from '@/components/ui/Section'
 import { Reveal } from '@/components/ui/Reveal'
+import { AuthorPortrait } from '@/components/AuthorPortrait'
 import { bio, mission, why } from '@/lib/content/profile'
 import { siteConfig } from '@/lib/site'
 
@@ -33,15 +34,18 @@ export default function AboutPage() {
 
           <Reveal delay={120}>
             <div>
-              <p className="tick">Currently writing about</p>
-              <ul className="mt-4 space-y-2.5">
-                {bio.focus.map((item) => (
-                  <li key={item} className="flex gap-3 font-sans text-[0.9375rem] text-graphite">
-                    <span aria-hidden="true" className="mt-2.5 h-px w-4 shrink-0 bg-horizon" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
+              <AuthorPortrait />
+              <div className="mt-12">
+                <p className="tick">Currently writing about</p>
+                <ul className="mt-4 space-y-2.5">
+                  {bio.focus.map((item) => (
+                    <li key={item} className="flex gap-3 font-sans text-[0.9375rem] text-graphite">
+                      <span aria-hidden="true" className="mt-2.5 h-px w-4 shrink-0 bg-horizon" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </Reveal>
         </div>
