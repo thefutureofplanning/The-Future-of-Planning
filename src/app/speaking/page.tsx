@@ -8,6 +8,7 @@ import {
   speakingLogistics,
   speakingTopics,
 } from '@/lib/content/speaking'
+import { siteConfig } from '@/lib/site'
 
 export const metadata: Metadata = {
   title: 'Speaking',
@@ -19,9 +20,15 @@ export const metadata: Metadata = {
 export default function SpeakingPage() {
   return (
     <>
-      <PageHeader eyebrow="Speaking" title="Talks about the people this profession is counting on." lede={speakingIntro}>
+      <PageHeader
+        eyebrow="Speaking"
+        title="Conversations centered around the next generation of financial planners."
+        lede={speakingIntro}
+      >
         <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-          <ButtonLink href="/schedule">Check availability</ButtonLink>
+          <ButtonLink href={siteConfig.calendlyUrl} external>
+            Schedule a discovery call
+          </ButtonLink>
           <ButtonLink href="/contact" variant="secondary">
             Send session details
           </ButtonLink>

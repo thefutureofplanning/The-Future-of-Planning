@@ -12,7 +12,7 @@ export type Appearance = {
 }
 
 export const speakingIntro =
-  'I speak about the next generation of financial planners — how firms recruit them, what makes them stay, and what the profession looks like when they are running it. Sessions are built for the room: a student chapter and a room of firm owners need very different conversations.'
+  'How firms recruit them, what makes them stay, and what they are looking for when it comes to succession planning. Sessions are built for the room: a student chapter and a room of firm owners need different conversations.'
 
 export const speakingTopics: SpeakingTopic[] = [
   {
