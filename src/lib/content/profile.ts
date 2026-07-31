@@ -16,9 +16,13 @@ export const bio = {
   short:
     'Jenna Smith is a financial planner based in Utah. She writes and speaks about how the profession recruits, develops and retains next-gen talent.',
   long: [
-    'I am nineteen, working full time in wealth management while carrying a full course load in personal financial planning at Utah Valley University. That combination is unusual, and it is the reason this publication exists: I get to watch the profession from the client meeting and the classroom on the same day.',
-    'Most mornings look like real planning work — cash flow, tax questions, portfolio reviews, meeting prep. Most afternoons look like coursework, a student association agenda, or a coaching appointment at the Money Success Center, where I sit with students working through their own money decisions.',
-    'The gap between those two rooms is what I write about. The profession talks constantly about attracting young talent; the students it wants to attract are rarely the ones describing what would actually work. I am trying to close that distance with clear writing, honest observation and a lot of questions asked of people further along than me.',
+    'Financial planning has one of the greatest opportunities of any profession.',
+    'People need good advice more than ever. At the same time, thousands of experienced advisors are approaching retirement while firms across the country struggle to attract and develop the next generation.',
+    'I believe solving that challenge is one of the most important conversations happening in our profession.',
+    'That’s why I created The Future of Planning.',
+    'Through articles, research, speaking, and conversations with leaders across the industry, I explore how firms can attract exceptional talent, how young advisors can build meaningful careers, and how we can strengthen the profession for the generations that follow.',
+    'Working full time in financial planning while completing my degree gives me a perspective that’s uncommon. Every day I move between classrooms, client meetings, industry conferences, and conversations with firm owners. I have the opportunity to see where expectations align, where they don’t, and where small changes could make a lasting difference.',
+    'My goal is to ask better questions, share what I’m learning, and contribute to building a profession where both seasoned and new advisors can thrive!',
   ],
   focus: [
     'The talent pipeline into financial planning',
