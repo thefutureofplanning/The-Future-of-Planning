@@ -36,9 +36,9 @@ export default function SpeakingPage() {
       </PageHeader>
 
       <Section>
-        <SectionHeading label="Sessions" title="Four talks, adapted to the audience in the room." />
+        <SectionHeading label="Sessions" title="Three talks, adapted to the audience in the room." />
         <ul className="grid gap-6 lg:grid-cols-2">
-          {speakingTopics.map((topic, index) => (
+          {speakingTopics.slice(0, 3).map((topic, index) => (
             <Reveal as="li" key={topic.title} delay={index * 80}>
               <div className="flex h-full flex-col rounded-card border border-rule bg-surface p-8">
                 <p className="tick text-horizon">{topic.audience}</p>
