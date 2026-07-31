@@ -34,9 +34,10 @@ Copy `.env.example` to `.env.local` and set:
 | `NEXT_PUBLIC_SITE_URL` | Yes | Canonical URLs, sitemap, OG images. No trailing slash. |
 | `NEXT_PUBLIC_SCHEDULING_URL` | Yes | The booking link embedded on `/schedule`. |
 | `NEXT_PUBLIC_CONTACT_EMAIL` | Yes | Address shown on `/contact` and used by the contact form. |
-| `BUTTONDOWN_API_KEY` | No | Newsletter provider key. Without it, `/api/subscribe` returns a clear "not connected" message instead of silently dropping signups. |
+| `BEEHIIV_API_KEY` | No | Beehiiv API key. Without it (and the publication ID below), `/api/subscribe` returns a clear "not connected" message instead of silently dropping signups. |
+| `BEEHIIV_PUBLICATION_ID` | No | Beehiiv publication ID, e.g. `pub_xxxxxxxx`. |
 
-Everything prefixed `NEXT_PUBLIC_` is visible in the browser. The Buttondown key is server-only.
+Everything prefixed `NEXT_PUBLIC_` is visible in the browser. The Beehiiv keys are server-only.
 
 ---
 
@@ -147,7 +148,7 @@ src/lib/
 
 **Scheduling** — the booking page (Cal.com by default, but any iframeable scheduler works) loads only when the embed scrolls into view, so `/schedule` still paints fast. A direct booking link is always shown as a fallback.
 
-**Newsletter** — the form posts to `/api/subscribe`. Buttondown is wired by default; swapping in ConvertKit, Beehiiv or Mailchimp means changing one `fetch` in `src/app/api/subscribe/route.ts` and nothing else.
+**Newsletter** — the form posts to `/api/subscribe`. Beehiiv is wired by default; swapping in ConvertKit, Buttondown or Mailchimp means changing one `fetch` in `src/app/api/subscribe/route.ts` and nothing else.
 
 **Contact** — composes a prefilled message in the visitor's own mail client. No server, no queue, no form that silently fails.
 
@@ -186,7 +187,7 @@ The codebase is structured for a publication that grows for years:
 
 **Booking calendar does not appear** — check `NEXT_PUBLIC_SCHEDULING_URL`, then check whether a content blocker is stopping the iframe from loading. The fallback link works either way.
 
-**Newsletter returns "not connected"** — that is the expected response until `BUTTONDOWN_API_KEY` is set. It is deliberate: signups are never accepted and discarded.
+**Newsletter returns "not connected"** — that is the expected response until `BEEHIIV_API_KEY` and `BEEHIIV_PUBLICATION_ID` are set. It is deliberate: signups are never accepted and discarded.
 
 ---
 

@@ -3,8 +3,8 @@ import { NextResponse } from 'next/server'
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
 
 /**
- * Newsletter signup. Buttondown is wired by default; swap the fetch below for
- * ConvertKit, Beehiiv or Mailchimp without touching the form component.
+ * Newsletter signup, wired to Beehiiv. Swap the fetch below for ConvertKit,
+ * Buttondown or Mailchimp without touching the form component.
  */
 export async function POST(request: Request) {
   let email = ''
@@ -20,32 +20,36 @@ export async function POST(request: Request) {
     return NextResponse.json({ message: 'That email address does not look right.' }, { status: 400 })
   }
 
-  const apiKey = process.env.BUTTONDOWN_API_KEY
+  const apiKey = process.env.BEEHIIV_API_KEY
+  const publicationId = process.env.BEEHIIV_PUBLICATION_ID
 
-  if (!apiKey) {
+  if (!apiKey || !publicationId) {
     return NextResponse.json(
       {
         message:
-          'The newsletter is not connected yet. Add BUTTONDOWN_API_KEY to the environment to start collecting signups.',
+          'The newsletter is not connected yet. Add BEEHIIV_API_KEY and BEEHIIV_PUBLICATION_ID to the environment to start collecting signups.',
       },
       { status: 501 },
     )
   }
 
   try {
-    const response = await fetch('https://api.buttondown.email/v1/subscribers', {
-      method: 'POST',
-      headers: {
-        Authorization: `Token ${apiKey}`,
-        'Content-Type': 'application/json',
+    const response = await fetch(
+      `https://api.beehiiv.com/v2/publications/${publicationId}/subscriptions`,
+      {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          reactivate_existing: true,
+          send_welcome_email: true,
+          utm_source: 'website',
+        }),
       },
-      body: JSON.stringify({ email_address: email, tags: ['website'] }),
-    })
-
-    if (response.status === 409 || response.status === 400) {
-      // Buttondown returns 400 for an address that already exists.
-      return NextResponse.json({ message: 'You are already on the list. Nothing more to do.' })
-    }
+    )
 
     if (!response.ok) {
       return NextResponse.json(
