@@ -1,3 +1,15 @@
+const DEFAULT_SITE_URL = 'https://thefutureofplanning.com'
+
+/** Falls back to the default whenever the env var is missing or not a valid absolute URL. */
+function resolveSiteUrl(value: string | undefined): string {
+  if (!value) return DEFAULT_SITE_URL
+  try {
+    return new URL(value).toString().replace(/\/$/, '')
+  } catch {
+    return DEFAULT_SITE_URL
+  }
+}
+
 export const siteConfig = {
   name: 'The Future of Planning',
   shortName: 'Future of Planning',
@@ -5,7 +17,7 @@ export const siteConfig = {
     'Exploring the future of financial planning through the perspective of the next generation.',
   description:
     'Essays, field notes and research on where financial planning is headed — written by Jenna Smith, a next-generation planner building a career at the front edge of the profession.',
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? 'https://thefutureofplanning.com').replace(/\/$/, ''),
+  url: resolveSiteUrl(process.env.NEXT_PUBLIC_SITE_URL),
   locale: 'en-US',
   author: {
     name: 'Jenna Smith',
