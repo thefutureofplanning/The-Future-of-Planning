@@ -9,6 +9,7 @@ export type Appearance = {
   detail: string
   year: string
   upcoming?: boolean
+  link?: { label: string; href: string }
 }
 
 export const speakingIntro =
@@ -51,6 +52,15 @@ export const appearances: Appearance[] = [
     detail: 'Session on recruiting and developing next-generation planners',
     year: '2026',
     upcoming: true,
+  },
+  {
+    event: 'Wealth Management Edge 2025',
+    detail: 'Panelist, "Focused on the Future" — on what the next generation of advisors is looking for in firms',
+    year: '2025',
+    link: {
+      label: 'Read the article',
+      href: 'https://www.wealthmanagement.com/recruiting/future-advisors-are-seeking-robust-ria-intern-programs-mentorship',
+    },
   },
   {
     event: 'University and student chapter sessions',

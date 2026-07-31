@@ -72,6 +72,16 @@ export default function SpeakingPage() {
                     ) : null}
                   </div>
                   <p className="mt-2 font-sans text-[0.9375rem] text-graphite">{appearance.detail}</p>
+                  {appearance.link ? (
+                    <a
+                      href={appearance.link.href}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="link-underline mt-2 inline-block font-sans text-sm text-ink transition-colors hover:text-horizon"
+                    >
+                      {appearance.link.label} →
+                    </a>
+                  ) : null}
                 </div>
                 <p className="tick sm:text-right">{appearance.year}</p>
               </div>
