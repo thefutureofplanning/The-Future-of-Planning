@@ -103,7 +103,7 @@ const personJsonLd = {
     'Financial planning education',
   ],
   affiliation: { '@type': 'CollegeOrUniversity', name: 'Utah Valley University' },
-  sameAs: [siteConfig.social.linkedin, siteConfig.social.x],
+  sameAs: [siteConfig.social.linkedin, siteConfig.social.instagram],
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

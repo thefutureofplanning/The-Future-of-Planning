@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Hero } from '@/components/home/Hero'
+import { AboutAuthor } from '@/components/home/AboutAuthor'
 import { RecentWriting } from '@/components/home/RecentWriting'
 import { Topics } from '@/components/home/Topics'
 import { Mission } from '@/components/home/Mission'
@@ -24,6 +25,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <AboutAuthor />
       <RecentWriting featured={featuredMeta} recent={recent} />
       <Topics />
       <Mission />

@@ -51,12 +51,12 @@ export function Footer() {
               LinkedIn
             </a>
             <a
-              href={siteConfig.social.x}
+              href={siteConfig.social.instagram}
               className="font-sans text-sm text-graphite transition-colors hover:text-horizon"
               target="_blank"
               rel="noreferrer noopener"
             >
-              X
+              Instagram
             </a>
             <a
               href="/feed.xml"
