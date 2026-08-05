@@ -4,23 +4,25 @@ import { cn, formatStamp } from '@/lib/utils'
 
 export function ArticleMetaLine({ article, className }: { article: ArticleMeta; className?: string }) {
   return (
-    <p className={cn('flex flex-wrap items-center gap-x-3 gap-y-1 tick', className)}>
-      <time dateTime={article.date}>{formatStamp(article.date)}</time>
-      <span aria-hidden="true" className="text-rule">
-        /
+    <div className={cn('flex flex-wrap items-center gap-x-3 gap-y-2', className)}>
+      <p className="flex flex-wrap items-center gap-x-3 gap-y-1 tick">
+        <time dateTime={article.date}>{formatStamp(article.date)}</time>
+        <span aria-hidden="true" className="text-rule">
+          /
+        </span>
+        <span>{article.readingMinutes} min</span>
+      </p>
+      <span className="rounded-full bg-horizon-soft px-3 py-1 font-mono text-[0.625rem] uppercase tracking-[0.14em] text-horizon">
+        {article.category}
       </span>
-      <span>{article.readingMinutes} min</span>
-      <span aria-hidden="true" className="text-rule">
-        /
-      </span>
-      <span className="text-horizon">{article.category}</span>
-    </p>
+    </div>
   )
 }
 
 export function ArticleCard({ article }: { article: ArticleMeta }) {
   return (
-    <article className="group relative flex h-full flex-col rounded-card border border-rule bg-surface p-7 transition duration-500 ease-horizon hover:-translate-y-1 hover:border-horizon/40 hover:shadow-lift">
+    <article className="group relative flex h-full flex-col overflow-hidden rounded-card border border-rule bg-surface p-7 transition duration-500 ease-horizon hover:-translate-y-1 hover:border-horizon/40 hover:shadow-lift">
+      <span aria-hidden="true" className="absolute inset-x-0 top-0 h-1 bg-horizon" />
       <ArticleMetaLine article={article} />
       <h3 className="mt-5 font-display text-2xl leading-snug tracking-tight text-ink">
         <Link href={`/articles/${article.slug}`} className="before:absolute before:inset-0">
