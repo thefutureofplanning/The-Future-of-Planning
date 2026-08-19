@@ -122,14 +122,15 @@ export default function ArticlePage({ params }: Props) {
 
       {article.image ? (
         <Container className="pb-4">
-          <div className="relative aspect-[16/10] overflow-hidden rounded-panel border border-rule bg-surface sm:aspect-[21/9]">
+          <div className="mx-auto max-w-sm overflow-hidden rounded-panel border border-rule bg-surface sm:max-w-md">
             <Image
               src={article.image}
               alt={article.title}
-              fill
+              width={612}
+              height={792}
               priority
-              sizes="(min-width: 1024px) 60rem, 100vw"
-              className="object-cover"
+              sizes="(min-width: 640px) 28rem, 24rem"
+              className="h-auto w-full"
             />
           </div>
         </Container>
