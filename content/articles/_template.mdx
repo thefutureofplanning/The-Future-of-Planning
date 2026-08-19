@@ -6,6 +6,7 @@ category: 'Profession'
 tags: ['tag-one', 'tag-two']
 featured: false
 draft: true
+image: ''
 ---
 
 Open with the observation, not the throat-clearing. One or two paragraphs that put the reader inside the problem before any structure appears.
@@ -41,4 +42,5 @@ Notes on the fields above:
 - `category` should match one of the four topics in `src/lib/content/topics.ts`, or add a new one there first.
 - `featured: true` promotes the piece to the hero card on the homepage and the articles index. Only one piece should carry it.
 - `draft: true` hides the piece in production but shows it locally, so it is safe to commit a work in progress.
+- `image` is optional. Point it at a file in `public/images/` (e.g. `/images/my-photo.jpg`) to show a header photo at the top of the article and use it as the social share preview. Leave it blank to skip.
 - Delete this file's leading underscore to publish it — files starting with `_` are never loaded.

@@ -21,6 +21,7 @@ export type ArticleMeta = {
   tags: string[]
   featured: boolean
   draft: boolean
+  image?: string
   readingMinutes: number
   readingLabel: string
 }
@@ -38,6 +39,7 @@ type Frontmatter = {
   tags?: string[]
   featured?: boolean
   draft?: boolean
+  image?: string
 }
 
 function readArticleFile(fileName: string): Article {
@@ -60,6 +62,7 @@ function readArticleFile(fileName: string): Article {
     tags: fm.tags ?? [],
     featured: fm.featured ?? false,
     draft: fm.draft ?? false,
+    image: fm.image,
     readingMinutes: Math.max(1, Math.round(stats.minutes)),
     readingLabel: `${Math.max(1, Math.round(stats.minutes))} min read`,
     content,

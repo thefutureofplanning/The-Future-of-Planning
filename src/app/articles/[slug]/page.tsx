@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { ArticleCard } from '@/components/articles/ArticleCard'
@@ -24,7 +25,9 @@ export function generateMetadata({ params }: Props): Metadata {
   if (!article) return { title: 'Article not found' }
 
   const url = `${siteConfig.url}/articles/${article.slug}`
-  const ogImage = `/og?title=${encodeURIComponent(article.title)}&category=${encodeURIComponent(article.category)}`
+  const ogImage =
+    article.image ??
+    `/og?title=${encodeURIComponent(article.title)}&category=${encodeURIComponent(article.category)}`
 
   return {
     title: article.title,
@@ -116,6 +119,21 @@ export default function ArticlePage({ params }: Props) {
           </div>
         </Container>
       </header>
+
+      {article.image ? (
+        <Container className="pb-4">
+          <div className="relative aspect-[16/10] overflow-hidden rounded-panel border border-rule bg-surface sm:aspect-[21/9]">
+            <Image
+              src={article.image}
+              alt={article.title}
+              fill
+              priority
+              sizes="(min-width: 1024px) 60rem, 100vw"
+              className="object-cover"
+            />
+          </div>
+        </Container>
+      ) : null}
 
       <Container>
         <div className="grid gap-14 pb-20 lg:grid-cols-[minmax(0,1fr)_14rem] xl:gap-24">
