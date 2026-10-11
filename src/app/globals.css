@@ -146,6 +146,14 @@
   margin-bottom: 0.6em;
 }
 
+.prose :where(h4) {
+  font-size: 1.125rem;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  margin-top: 1.75em;
+  margin-bottom: 0.5em;
+}
+
 .prose :where(a) {
   text-decoration: none;
   box-shadow: inset 0 -1px 0 0 rgb(var(--horizon) / 0.45);
@@ -197,12 +205,12 @@
 }
 
 /* Headings are wrapped in anchors by rehype-autolink-headings. */
-.prose :where(h2 > a, h3 > a) {
+.prose :where(h2 > a, h3 > a, h4 > a) {
   box-shadow: none;
   color: inherit;
 }
 
-.prose :where(h2 > a:hover, h3 > a:hover) {
+.prose :where(h2 > a:hover, h3 > a:hover, h4 > a:hover) {
   box-shadow: none;
   color: rgb(var(--horizon));
 }
