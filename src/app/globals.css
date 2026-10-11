@@ -147,11 +147,15 @@
 }
 
 .prose :where(h4) {
-  font-size: 1.125rem;
+  font-size: 1.1875rem;
+  font-weight: 650;
   line-height: 1.35;
   letter-spacing: -0.01em;
-  margin-top: 1.75em;
-  margin-bottom: 0.5em;
+  margin-top: 2.25em;
+  margin-bottom: 0.6em;
+  margin-left: 0.25rem;
+  padding-left: 0.875rem;
+  border-left: 3px solid rgb(var(--horizon));
 }
 
 .prose :where(a) {
@@ -162,6 +166,12 @@
 
 .prose :where(a):hover {
   box-shadow: inset 0 -2px 0 0 rgb(var(--horizon));
+}
+
+/* Buttons inside an article should not pick up the underline treatment above. */
+.prose .article-cta a,
+.prose .article-cta a:hover {
+  box-shadow: none;
 }
 
 .prose :where(blockquote) {

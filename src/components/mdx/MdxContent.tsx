@@ -3,6 +3,8 @@ import { MDXRemote } from 'next-mdx-remote/rsc'
 import remarkGfm from 'remark-gfm'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import { ButtonLink } from '@/components/ui/Button'
+import { siteConfig } from '@/lib/site'
 
 function Anchor({ href = '', children }: { href?: string; children?: React.ReactNode }) {
   const isInternal = href.startsWith('/') || href.startsWith('#')
@@ -51,11 +53,26 @@ function Figure({ src, alt, caption }: { src: string; alt: string; caption?: str
   )
 }
 
+/** Closing call to action: follow on LinkedIn or join the newsletter. */
+function FollowButtons() {
+  return (
+    <div className="article-cta not-prose my-10 flex flex-col gap-3 sm:flex-row">
+      <ButtonLink href={siteConfig.social.linkedin} external>
+        Follow on LinkedIn
+      </ButtonLink>
+      <ButtonLink href="/newsletter" variant="secondary">
+        Subscribe to the newsletter
+      </ButtonLink>
+    </div>
+  )
+}
+
 const mdxComponents = {
   a: Anchor,
   Note,
   PullQuote,
   Figure,
+  FollowButtons,
 }
 
 export function MdxContent({ source }: { source: string }) {
