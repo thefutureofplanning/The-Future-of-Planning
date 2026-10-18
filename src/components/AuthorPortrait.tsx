@@ -5,7 +5,7 @@ export function AuthorPortrait() {
     <div className="mx-auto w-48 sm:w-56">
       <div className="relative aspect-[3/4] overflow-hidden rounded-t-full bg-paper">
         <Image
-          src="/images/jenna-headshot.jpg"
+          src="/images/jenna-smith.webp"
           alt="Jenna Smith"
           fill
           sizes="(min-width: 640px) 14rem, 12rem"
